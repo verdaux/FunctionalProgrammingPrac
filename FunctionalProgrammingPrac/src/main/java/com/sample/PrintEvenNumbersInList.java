@@ -19,8 +19,9 @@ public class PrintEvenNumbersInList
 		{
 			numbers.
 					stream()
-							.filter(PrintEvenNumbersInList::isEven)
-							.forEach(System.out::println);
+							//.filter(PrintEvenNumbersInList::isEven)
+							.filter(num -> num%2==0)
+								.forEach(System.out::println);
 		}
 
 //	private static void print(int number)
