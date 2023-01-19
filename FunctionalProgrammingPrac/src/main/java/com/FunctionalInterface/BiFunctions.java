@@ -3,12 +3,13 @@ package com.FunctionalInterface;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
+import java.util.function.IntBinaryOperator;
 
 public class BiFunctions
 {
     public static void main(String[] args)
     {
-        BiPredicate<Integer,String> check = (number,str) -> true;
+        BiPredicate<Integer,String> check = (Integer number,String str) -> true;
         BiPredicate<Integer,String> checkNow = (number,str) -> {
                 return number<10 && str.length()>10;
         };
@@ -27,5 +28,8 @@ public class BiFunctions
         };
 
         biCons.accept(14,"damn");
+
+        IntBinaryOperator checkFunc = (x,y) -> (x+y);
+        System.out.println("Int Binary check :: "+checkFunc.applyAsInt(10,20));
     }
 }
