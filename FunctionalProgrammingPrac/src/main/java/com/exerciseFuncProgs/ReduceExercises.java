@@ -1,6 +1,7 @@
 package com.exerciseFuncProgs;
 
 import java.util.List;
+import java.util.function.BinaryOperator;
 
 public class ReduceExercises
 {
@@ -29,6 +30,14 @@ public class ReduceExercises
 
     public static int sumOfOddNumbers(List<Integer> numList)
     {
+        BinaryOperator<Integer> sum2 = new BinaryOperator<Integer>()
+        {
+            @Override
+            public Integer apply(Integer integer, Integer integer2)
+            {
+                return integer+integer2;
+            }
+        };
         return numList
                 .stream()
                 .filter(num -> num%2==1)
