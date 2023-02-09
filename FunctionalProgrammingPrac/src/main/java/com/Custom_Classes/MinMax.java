@@ -28,5 +28,9 @@ public class MinMax
                 .stream()
                 .max(compareByNoOfStudentsAndNoOfReviews));
 
+        System.out.println(courses
+                .stream()
+                .min(compareByNoOfStudentsAndNoOfReviews));
+
     }
 }
