@@ -30,7 +30,13 @@ public class MinMax
 
         System.out.println(courses
                 .stream()
-                .min(compareByNoOfStudentsAndNoOfReviews));
+                        .filter(course -> course.getReviewScore()<90)
+                .min(compareByNoOfStudentsAndNoOfReviews)
+                .orElse(new Course("Kubernetes", "Cloud", 91, 20000))
+        )
+
+
+        ;
 
     }
 }
