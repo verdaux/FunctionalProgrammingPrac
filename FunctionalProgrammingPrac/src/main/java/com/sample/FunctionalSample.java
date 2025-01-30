@@ -17,8 +17,7 @@ public class FunctionalSample
 	private static void printAllNumbersInListFunctional(List<Integer> numbers)
 	{
 		
-		numbers.
-				stream()
+		numbers
 						.forEach(System.out::println);
 						
 		//.forEach(FunctionalSample::print);
