@@ -2,6 +2,7 @@ package com.Behavior;
 
 import java.util.List;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class BehaviorParamForMap
@@ -15,6 +16,10 @@ public class BehaviorParamForMap
 
         calculation(numList, squareFunction);
         calculation(numList, cubeFunction);
+
+        Predicate<Integer> isEVen = num -> num%2==0;
+
+        isEvenTest(numList,isEVen);
     }
 
     private static void calculation(List<Integer> numList, Function<Integer, Integer> calcFunction)
@@ -27,5 +32,13 @@ public class BehaviorParamForMap
                 ;
 
         System.out.println(calcNums);
+    }
+
+    private static void isEvenTest(List<Integer> numList, Predicate<Integer> isEVenPredicate)
+    {
+        numList
+                .stream()
+                .filter(isEVenPredicate)
+                .forEach(System.out::println);
     }
 }
