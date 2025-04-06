@@ -6,7 +6,7 @@ public class AddAll
 {
     public static void main(String[] args)
     {
-        List<Integer> numList = List.of(8,4,3,7,1,8,11,0,5);
+        List<Integer> numList = List.of(8,4,4,3,7,1,8,11,0,5);
         int sum = addAll(numList);
         System.out.println("sum:: "+sum);
         int max = findMax(numList);

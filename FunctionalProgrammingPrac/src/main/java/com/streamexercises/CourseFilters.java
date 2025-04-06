@@ -96,5 +96,10 @@ public class CourseFilters
         System.out.println("Squared list::");
         squaredList
                 .forEach(System.out::println);
+
+        int sum = numbers
+                .stream()
+                .reduce(0, Integer::sum)
+        ;
     }
 }

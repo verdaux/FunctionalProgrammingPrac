@@ -9,8 +9,5 @@
         <module name="FunctionalProgrammingPrac" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="FunctionalProgrammingPrac" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
